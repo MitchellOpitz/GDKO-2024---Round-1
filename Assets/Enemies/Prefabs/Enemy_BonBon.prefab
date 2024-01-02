@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7583048295135818271}
   - component: {fileID: -970303940089343636}
   - component: {fileID: 3206934374188615966}
+  - component: {fileID: 631943825117932379}
   m_Layer: 0
   m_Name: Enemy_BonBon
   m_TagString: Enemy
@@ -170,3 +171,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &631943825117932379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660264059144422497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a081819030f624b4dabac1e36f09c116, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 2
