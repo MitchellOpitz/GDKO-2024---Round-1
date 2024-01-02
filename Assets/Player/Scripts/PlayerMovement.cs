@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         halfPlayerWidth = spriteRenderer.bounds.extents.x;
-        thrusterAnimator = transform.Find("Thrusters").GetComponent<Animator>(); // Adjust "Thruster" if the child's name is different
+        thrusterAnimator = transform.Find("Thrusters").GetComponent<Animator>();
     }
 
     void HandleInput()
