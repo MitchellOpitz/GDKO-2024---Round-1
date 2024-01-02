@@ -55,14 +55,16 @@ public class Powerup : MonoBehaviour
         switch (powerupType)
         {
             case 1:
-                // Effect for PowerUp type 1
+                Debug.Log("Effect for PowerUp type 1 Activated.");
                 break;
             case 2:
-                // Effect for PowerUp type 2
+                Debug.Log("Effect for PowerUp type 2 Activated.");
                 break;
             case 3:
-                // Effect for PowerUp type 3
+                Debug.Log("Effect for PowerUp type 3 Activated.");
                 break;
         }
+
+        Destroy(gameObject);
     }
 }

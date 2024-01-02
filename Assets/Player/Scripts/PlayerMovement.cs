@@ -71,4 +71,14 @@ public class PlayerMovement : MonoBehaviour
     {
         return Camera.main.orthographicSize * Camera.main.aspect;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Touched something.");
+        if (collision.tag == "Powerup")
+        {
+            Powerup powerup = collision.GetComponent<Powerup>();
+            powerup.ActivateEffect();
+        }
+    }
 }
