@@ -3,47 +3,56 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5.0f;
+    public Sprite leftSprite;
+    public Sprite rightSprite;
+    public Sprite stoppedSprite;
     private bool isMovingRight = false;
     private float halfPlayerWidth;
+    private SpriteRenderer spriteRenderer;
 
     void Start()
     {
-        // Calculate half of the player's width
-        halfPlayerWidth = GetComponent<SpriteRenderer>().bounds.extents.x;
+        Initialize();
     }
 
     void Update()
     {
-        HandleMovement();
+        HandleInput();
+        MovePlayer();
+        UpdateSprite();
     }
 
-    void HandleMovement()
+    void Initialize()
     {
-        if (Input.GetButtonDown("Fire1"))  // Replace "Fire1" with your button
-        {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        halfPlayerWidth = spriteRenderer.bounds.extents.x;
+    }
+
+    void HandleInput()
+    {
+        if (Input.GetButtonDown("Fire1"))
             isMovingRight = true;
-        }
-
-        if (Input.GetButtonUp("Fire1"))  // Replace "Fire1" with your button
-        {
+        else if (Input.GetButtonUp("Fire1"))
             isMovingRight = false;
-        }
+    }
 
-        Vector3 position = transform.position;
+    void MovePlayer()
+    {
+        float movementDirection = isMovingRight ? 1 : -1;
+        transform.position = new Vector3(
+            Mathf.Clamp(transform.position.x + movementDirection * speed * Time.deltaTime,
+            -GetScreenWidth() + halfPlayerWidth, GetScreenWidth() - halfPlayerWidth),
+            transform.position.y,
+            transform.position.z
+        );
+    }
 
-        if (isMovingRight)
-        {
-            position.x += speed * Time.deltaTime;
-        }
+    void UpdateSprite()
+    {
+        if (transform.position.x <= -GetScreenWidth() + halfPlayerWidth || transform.position.x >= GetScreenWidth() - halfPlayerWidth)
+            spriteRenderer.sprite = stoppedSprite;
         else
-        {
-            position.x -= speed * Time.deltaTime;
-        }
-
-        // Clamp position
-        position.x = Mathf.Clamp(position.x, -GetScreenWidth() + halfPlayerWidth, GetScreenWidth() - halfPlayerWidth);
-
-        transform.position = position;
+            spriteRenderer.sprite = isMovingRight ? rightSprite : leftSprite;
     }
 
     float GetScreenWidth()
