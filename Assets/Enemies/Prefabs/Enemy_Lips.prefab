@@ -185,3 +185,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   score: 300
+  powerUpPrefab: {fileID: 4192745911213093100, guid: 1c0720d6ea234d84ebf4e7d8e89c435a, type: 3}
+  spawnChance: 0.1
