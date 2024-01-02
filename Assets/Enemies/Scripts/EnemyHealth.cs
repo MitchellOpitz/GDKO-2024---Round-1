@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth = 100;
+    public int score = 100;
     private int currentHealth;
 
     void Start()
@@ -22,6 +23,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
+        ScoreManager.Instance.AddScore(score);
         Destroy(gameObject);
     }
 }
