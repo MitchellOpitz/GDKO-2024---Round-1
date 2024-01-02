@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isMovingRight = false;
     private float halfPlayerWidth;
     private SpriteRenderer spriteRenderer;
+    private Animator thrusterAnimator;
 
     void Start()
     {
@@ -19,13 +20,14 @@ public class PlayerMovement : MonoBehaviour
     {
         HandleInput();
         MovePlayer();
-        UpdateSprite();
+        UpdateSpriteAndAnimation();
     }
 
     void Initialize()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         halfPlayerWidth = spriteRenderer.bounds.extents.x;
+        thrusterAnimator = transform.Find("Thrusters").GetComponent<Animator>(); // Adjust "Thruster" if the child's name is different
     }
 
     void HandleInput()
@@ -47,12 +49,22 @@ public class PlayerMovement : MonoBehaviour
         );
     }
 
-    void UpdateSprite()
+    void UpdateSpriteAndAnimation()
     {
+        int animationState = 0; // 0 for stopped, -1 for left, 1 for right
+
         if (transform.position.x <= -GetScreenWidth() + halfPlayerWidth || transform.position.x >= GetScreenWidth() - halfPlayerWidth)
+        {
             spriteRenderer.sprite = stoppedSprite;
+            animationState = 0;
+        }
         else
+        {
             spriteRenderer.sprite = isMovingRight ? rightSprite : leftSprite;
+            animationState = isMovingRight ? 1 : -1;
+        }
+
+        thrusterAnimator.SetInteger("MovementDirection", animationState);
     }
 
     float GetScreenWidth()
