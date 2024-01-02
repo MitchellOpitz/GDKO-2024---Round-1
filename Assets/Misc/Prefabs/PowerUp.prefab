@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7442241813859872549}
   - component: {fileID: 8666120619334596029}
   - component: {fileID: 1407141974488575383}
-  - component: {fileID: 3152747003089205843}
   m_Layer: 0
   m_Name: PowerUp
   m_TagString: Untagged
@@ -101,18 +100,5 @@ MonoBehaviour:
   type1Sprite: {fileID: -1764877882, guid: 8d01d4d9963f439498d6e98bd9c2e239, type: 3}
   type2Sprite: {fileID: -2009021702, guid: 8d01d4d9963f439498d6e98bd9c2e239, type: 3}
   type3Sprite: {fileID: 1787360563, guid: 8d01d4d9963f439498d6e98bd9c2e239, type: 3}
---- !u!114 &3152747003089205843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4192745911213093100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46184e1d8a59f1346a1c394393a03f94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type1Sprite: {fileID: 0}
-  type2Sprite: {fileID: 0}
-  type3Sprite: {fileID: 0}
+  speed: 1
+  offScreenOffset: 0.5
