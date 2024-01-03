@@ -5,6 +5,7 @@ public class PlayerShoot : MonoBehaviour
     public GameObject projectilePrefab;
     public float projectileSpeed = 10f;
     public Vector2 shootingDirection = Vector2.up;
+    public Transform projectileSpawnPoint;
 
     void Update()
     {
@@ -16,12 +17,18 @@ public class PlayerShoot : MonoBehaviour
 
     private void Shoot()
     {
-        GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        if (projectileSpawnPoint == null)
+        {
+            Debug.LogError("Projectile spawn point not set.");
+            return;
+        }
+
+        GameObject projectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
         Rigidbody2D projectileRb = projectile.GetComponent<Rigidbody2D>();
 
         if (projectileRb != null)
         {
-            projectileRb.velocity = shootingDirection.normalized * projectileSpeed;
+            projectileRb.velocity = projectileSpawnPoint.up * projectileSpeed;
         }
         else
         {
