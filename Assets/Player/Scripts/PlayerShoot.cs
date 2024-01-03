@@ -3,6 +3,8 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
     public GameObject projectilePrefab;
+    public GameObject circlePrefab;
+    public GameObject squarePrefab;
     public float projectileSpeed = 10f;
     public Vector2 shootingDirection = Vector2.up;
     public Transform projectileSpawnPoint;
@@ -33,6 +35,22 @@ public class PlayerShoot : MonoBehaviour
         else
         {
             Debug.LogError("Projectile prefab does not have a Rigidbody2D component.");
+        }
+    }
+
+    public void UpdateBullets(string newProjectile)
+    {
+        switch (newProjectile)
+        {
+            case "Circle":
+                projectilePrefab = circlePrefab;
+                break;
+            case "Square":
+                projectilePrefab = squarePrefab;
+                break;
+            default:
+                Debug.LogWarning("Projectile type not recognized: " + newProjectile);
+                break;
         }
     }
 }

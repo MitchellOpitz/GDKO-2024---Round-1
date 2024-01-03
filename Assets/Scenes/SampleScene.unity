@@ -2264,6 +2264,14 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5485352858392414771, guid: bfdc7214cd64daf4287bbd8bd5a30925, type: 3}
+      propertyPath: circlePrefab
+      value: 
+      objectReference: {fileID: 2277048922259409824, guid: 50cdbd1a5c3a00b46a899e2092b08c40, type: 3}
+    - target: {fileID: 5485352858392414771, guid: bfdc7214cd64daf4287bbd8bd5a30925, type: 3}
+      propertyPath: squarePrefab
+      value: 
+      objectReference: {fileID: 2277048922259409824, guid: 99b0ce4e4457dc04dafa081ffab28382, type: 3}
+    - target: {fileID: 5485352858392414771, guid: bfdc7214cd64daf4287bbd8bd5a30925, type: 3}
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 7026624191439916059, guid: 96b77ea8d50ab194f9ae89a46c265717, type: 3}
