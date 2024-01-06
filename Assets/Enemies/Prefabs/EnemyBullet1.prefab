@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  maxDistance: 15
+  maxDistance: 25
 --- !u!58 &-3767878125637422951
 CircleCollider2D:
   m_ObjectHideFlags: 0
