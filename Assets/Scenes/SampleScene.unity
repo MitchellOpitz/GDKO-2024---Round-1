@@ -412,6 +412,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 660264059144422497, guid: dc25335689f00b045acfc54d8ae8f54a, type: 3}
       insertIndex: 5
       addedObject: {fileID: 454710111}
+    - targetCorrespondingSourceObject: {fileID: 660264059144422497, guid: dc25335689f00b045acfc54d8ae8f54a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 454710112}
   m_SourcePrefab: {fileID: 100100000, guid: dc25335689f00b045acfc54d8ae8f54a, type: 3}
 --- !u!1001 &295821291
 PrefabInstance:
@@ -480,6 +483,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 660264059144422497, guid: dc25335689f00b045acfc54d8ae8f54a, type: 3}
       insertIndex: 5
       addedObject: {fileID: 1120876451}
+    - targetCorrespondingSourceObject: {fileID: 660264059144422497, guid: dc25335689f00b045acfc54d8ae8f54a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1120876452}
   m_SourcePrefab: {fileID: 100100000, guid: dc25335689f00b045acfc54d8ae8f54a, type: 3}
 --- !u!4 &333695953 stripped
 Transform:
@@ -511,6 +517,21 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8411204588079356336, guid: 29a1b4e841f737e4cb28ab9b6b0e43d6, type: 3}
   bulletSpeed: 5
   shootingInterval: 3
+--- !u!114 &454710112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454710105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c287a0a56ddf245ab58ff3001dc2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  verticalSpeed: 5
+  horizontalSpeed: 2
+  waveMagnitude: 0.5
 --- !u!4 &485972558 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7004330466614359900, guid: 8dfb908659a09fe4c955ec50f441ce61, type: 3}
@@ -881,6 +902,21 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8411204588079356336, guid: 29a1b4e841f737e4cb28ab9b6b0e43d6, type: 3}
   bulletSpeed: 5
   shootingInterval: 3
+--- !u!114 &629171452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515642475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c287a0a56ddf245ab58ff3001dc2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  verticalSpeed: 5
+  horizontalSpeed: 2
+  waveMagnitude: 0.5
 --- !u!1001 &656152362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1240,6 +1276,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 660264059144422497, guid: dc25335689f00b045acfc54d8ae8f54a, type: 3}
       insertIndex: 5
       addedObject: {fileID: 1682707544}
+    - targetCorrespondingSourceObject: {fileID: 660264059144422497, guid: dc25335689f00b045acfc54d8ae8f54a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1682707545}
   m_SourcePrefab: {fileID: 100100000, guid: dc25335689f00b045acfc54d8ae8f54a, type: 3}
 --- !u!1 &833481234 stripped
 GameObject:
@@ -2297,6 +2336,21 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8411204588079356336, guid: 29a1b4e841f737e4cb28ab9b6b0e43d6, type: 3}
   bulletSpeed: 5
   shootingInterval: 3
+--- !u!114 &1120876452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833481234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c287a0a56ddf245ab58ff3001dc2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  verticalSpeed: 5
+  horizontalSpeed: 2
+  waveMagnitude: 0.5
 --- !u!1001 &1131088544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2993,6 +3047,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 660264059144422497, guid: dc25335689f00b045acfc54d8ae8f54a, type: 3}
       insertIndex: 5
       addedObject: {fileID: 629171451}
+    - targetCorrespondingSourceObject: {fileID: 660264059144422497, guid: dc25335689f00b045acfc54d8ae8f54a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 629171452}
   m_SourcePrefab: {fileID: 100100000, guid: dc25335689f00b045acfc54d8ae8f54a, type: 3}
 --- !u!1001 &1340620960
 PrefabInstance:
@@ -3744,6 +3801,21 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8411204588079356336, guid: 29a1b4e841f737e4cb28ab9b6b0e43d6, type: 3}
   bulletSpeed: 5
   shootingInterval: 3
+--- !u!114 &1682707545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092480772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c287a0a56ddf245ab58ff3001dc2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  verticalSpeed: 5
+  horizontalSpeed: 2
+  waveMagnitude: 0.5
 --- !u!1 &1702567121 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 660264059144422497, guid: dc25335689f00b045acfc54d8ae8f54a, type: 3}
@@ -3764,6 +3836,21 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8411204588079356336, guid: 29a1b4e841f737e4cb28ab9b6b0e43d6, type: 3}
   bulletSpeed: 5
   shootingInterval: 3
+--- !u!114 &1702567128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702567121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c287a0a56ddf245ab58ff3001dc2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  verticalSpeed: 5
+  horizontalSpeed: 2
+  waveMagnitude: 0.5
 --- !u!1001 &1740230145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4217,6 +4304,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 660264059144422497, guid: dc25335689f00b045acfc54d8ae8f54a, type: 3}
       insertIndex: 5
       addedObject: {fileID: 1702567127}
+    - targetCorrespondingSourceObject: {fileID: 660264059144422497, guid: dc25335689f00b045acfc54d8ae8f54a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1702567128}
   m_SourcePrefab: {fileID: 100100000, guid: dc25335689f00b045acfc54d8ae8f54a, type: 3}
 --- !u!1001 &1866198935
 PrefabInstance:
