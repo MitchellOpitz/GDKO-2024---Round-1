@@ -38,4 +38,9 @@ public class EnemyHealth : MonoBehaviour
             Instantiate(powerUpPrefab, transform.position, Quaternion.identity);
         }
     }
+
+    public void DestroyEnemy()
+    {
+        Destroy(gameObject);
+    }
 }

@@ -79,5 +79,10 @@ public class PlayerMovement : MonoBehaviour
             Powerup powerup = collision.GetComponent<Powerup>();
             powerup.ActivateEffect();
         }
+
+        if (collision.tag == "Enemy")
+        {
+            collision.GetComponent<EnemyHealth>().DestroyEnemy();
+        }
     }
 }
