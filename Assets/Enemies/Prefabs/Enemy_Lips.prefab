@@ -12,8 +12,10 @@ GameObject:
   - component: {fileID: 2541901526061685821}
   - component: {fileID: 2578984554781467423}
   - component: {fileID: 1350602087994357516}
+  - component: {fileID: 2789818088496804969}
   - component: {fileID: 3628454529078451045}
   - component: {fileID: 3236117583037011198}
+  - component: {fileID: 9014704970576085370}
   m_Layer: 0
   m_Name: Enemy_Lips
   m_TagString: Enemy
@@ -136,6 +138,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2789818088496804969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660264059144422497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec79e89e3cfcbc4494ce6ccf0c7f94b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diagonalSpeed: 3
+  verticalRiseSpeed: 5
+  lowerThreshold: -1
+  upperThreshold: 5
 --- !u!58 &3628454529078451045
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -187,3 +205,18 @@ MonoBehaviour:
   score: 300
   powerUpPrefab: {fileID: 4192745911213093100, guid: 1c0720d6ea234d84ebf4e7d8e89c435a, type: 3}
   spawnChance: 0.1
+--- !u!114 &9014704970576085370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660264059144422497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac124db2bd2fa9547b4a8176feecd5d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 8985013306141853661, guid: 29f92a7f016f8284693a04a781655351, type: 3}
+  bulletSpeed: 5
+  shootingInterval: 3
