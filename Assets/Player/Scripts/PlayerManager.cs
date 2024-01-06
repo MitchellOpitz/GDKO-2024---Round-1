@@ -74,5 +74,7 @@ public class PlayerManager : MonoBehaviour
     private void NoLivesLeft()
     {
         Debug.Log("Game over, darling.");
+        ScoreManager scoreManager = FindAnyObjectByType<ScoreManager>();
+        scoreManager.CheckHighScore();
     }
 }
