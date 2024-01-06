@@ -1374,6 +1374,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 660264059144422497, guid: 8dfb908659a09fe4c955ec50f441ce61, type: 3}
       insertIndex: 4
       addedObject: {fileID: 843696838}
+    - targetCorrespondingSourceObject: {fileID: 660264059144422497, guid: 8dfb908659a09fe4c955ec50f441ce61, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 843696844}
   m_SourcePrefab: {fileID: 100100000, guid: 8dfb908659a09fe4c955ec50f441ce61, type: 3}
 --- !u!1 &843696837 stripped
 GameObject:
@@ -1392,6 +1395,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec79e89e3cfcbc4494ce6ccf0c7f94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diagonalSpeed: 3
+  verticalRiseSpeed: 5
+  lowerThreshold: -1
+  upperThreshold: 5
+--- !u!114 &843696844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843696837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac124db2bd2fa9547b4a8176feecd5d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 8985013306141853661, guid: 29f92a7f016f8284693a04a781655351, type: 3}
+  bulletSpeed: 5
+  shootingInterval: 3
 --- !u!1001 &860030839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1459,6 +1481,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 660264059144422497, guid: 8dfb908659a09fe4c955ec50f441ce61, type: 3}
       insertIndex: 4
       addedObject: {fileID: 1623326360}
+    - targetCorrespondingSourceObject: {fileID: 660264059144422497, guid: 8dfb908659a09fe4c955ec50f441ce61, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1623326366}
   m_SourcePrefab: {fileID: 100100000, guid: 8dfb908659a09fe4c955ec50f441ce61, type: 3}
 --- !u!1 &860030840 stripped
 GameObject:
@@ -2209,6 +2234,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 660264059144422497, guid: 8dfb908659a09fe4c955ec50f441ce61, type: 3}
       insertIndex: 4
       addedObject: {fileID: 2014818939}
+    - targetCorrespondingSourceObject: {fileID: 660264059144422497, guid: 8dfb908659a09fe4c955ec50f441ce61, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2014818945}
   m_SourcePrefab: {fileID: 100100000, guid: 8dfb908659a09fe4c955ec50f441ce61, type: 3}
 --- !u!1 &1014529309 stripped
 GameObject:
@@ -3563,6 +3591,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec79e89e3cfcbc4494ce6ccf0c7f94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diagonalSpeed: 3
+  verticalRiseSpeed: 5
+  lowerThreshold: -1
+  upperThreshold: 5
+--- !u!114 &1623326366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860030840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac124db2bd2fa9547b4a8176feecd5d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 8985013306141853661, guid: 29f92a7f016f8284693a04a781655351, type: 3}
+  bulletSpeed: 5
+  shootingInterval: 3
 --- !u!1001 &1630018885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3630,6 +3677,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 660264059144422497, guid: 8dfb908659a09fe4c955ec50f441ce61, type: 3}
       insertIndex: 4
       addedObject: {fileID: 1630018887}
+    - targetCorrespondingSourceObject: {fileID: 660264059144422497, guid: 8dfb908659a09fe4c955ec50f441ce61, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1630018893}
   m_SourcePrefab: {fileID: 100100000, guid: 8dfb908659a09fe4c955ec50f441ce61, type: 3}
 --- !u!1 &1630018886 stripped
 GameObject:
@@ -3648,6 +3698,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec79e89e3cfcbc4494ce6ccf0c7f94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diagonalSpeed: 3
+  verticalRiseSpeed: 5
+  lowerThreshold: -1
+  upperThreshold: 5
+--- !u!114 &1630018893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630018886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac124db2bd2fa9547b4a8176feecd5d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 8985013306141853661, guid: 29f92a7f016f8284693a04a781655351, type: 3}
+  bulletSpeed: 5
+  shootingInterval: 3
 --- !u!1 &1631948408
 GameObject:
   m_ObjectHideFlags: 0
@@ -4549,6 +4618,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 660264059144422497, guid: 8dfb908659a09fe4c955ec50f441ce61, type: 3}
       insertIndex: 4
       addedObject: {fileID: 1931597591}
+    - targetCorrespondingSourceObject: {fileID: 660264059144422497, guid: 8dfb908659a09fe4c955ec50f441ce61, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1931597597}
   m_SourcePrefab: {fileID: 100100000, guid: 8dfb908659a09fe4c955ec50f441ce61, type: 3}
 --- !u!1 &1931597590 stripped
 GameObject:
@@ -4567,6 +4639,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec79e89e3cfcbc4494ce6ccf0c7f94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diagonalSpeed: 3
+  verticalRiseSpeed: 5
+  lowerThreshold: -1
+  upperThreshold: 5
+--- !u!114 &1931597597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931597590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac124db2bd2fa9547b4a8176feecd5d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 8985013306141853661, guid: 29f92a7f016f8284693a04a781655351, type: 3}
+  bulletSpeed: 5
+  shootingInterval: 3
 --- !u!1001 &1953101154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4863,6 +4954,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec79e89e3cfcbc4494ce6ccf0c7f94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diagonalSpeed: 3
+  verticalRiseSpeed: 5
+  lowerThreshold: -1
+  upperThreshold: 5
+--- !u!114 &2014818945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014529309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac124db2bd2fa9547b4a8176feecd5d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 8985013306141853661, guid: 29f92a7f016f8284693a04a781655351, type: 3}
+  bulletSpeed: 5
+  shootingInterval: 3
 --- !u!4 &2063125697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7004330466614359900, guid: 9dfdf402bb406e4479910a483b1de125, type: 3}

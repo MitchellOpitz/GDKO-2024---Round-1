@@ -32,7 +32,6 @@ public class LipsMovement : MonoBehaviour
             if (transform.position.y >= upperThreshold)
             {
                 rising = false;
-                movementDirection.x *= -1; // Change horizontal direction
             }
         }
 
@@ -57,5 +56,17 @@ public class LipsMovement : MonoBehaviour
             movementDirection.x *= -1; // Reflect horizontally
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         }
+    }
+    void OnDrawGizmos()
+    {
+        // Set the color for the lower threshold line
+        Gizmos.color = Color.red;
+        // Draw a horizontal line for the lower threshold
+        Gizmos.DrawLine(new Vector3(-10, lowerThreshold, 0), new Vector3(10, lowerThreshold, 0));
+
+        // Set the color for the upper threshold line
+        Gizmos.color = Color.green;
+        // Draw a horizontal line for the upper threshold
+        Gizmos.DrawLine(new Vector3(-10, upperThreshold, 0), new Vector3(10, upperThreshold, 0));
     }
 }
