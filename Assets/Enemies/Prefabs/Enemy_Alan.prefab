@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2887897955250330090}
   - component: {fileID: -4810795956082862912}
   - component: {fileID: 6772911557808785413}
+  - component: {fileID: 1974563690790158339}
   - component: {fileID: -3617866631288861193}
   m_Layer: 0
   m_Name: Enemy_Alan
@@ -171,6 +172,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1974563690790158339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660264059144422497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f72e58f85645f4cb672ff2a1b8d206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!114 &-3617866631288861193
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 7583048295135818271}
   - component: {fileID: -970303940089343636}
   - component: {fileID: 3206934374188615966}
+  - component: {fileID: 747032348029411188}
   - component: {fileID: 631943825117932379}
+  - component: {fileID: 5023839034276248001}
   m_Layer: 0
   m_Name: Enemy_BonBon
   m_TagString: Enemy
@@ -171,6 +173,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &747032348029411188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660264059144422497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac124db2bd2fa9547b4a8176feecd5d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 8411204588079356336, guid: 29a1b4e841f737e4cb28ab9b6b0e43d6, type: 3}
+  bulletSpeed: 5
+  shootingInterval: 3
 --- !u!114 &631943825117932379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,3 +204,18 @@ MonoBehaviour:
   score: 200
   powerUpPrefab: {fileID: 4192745911213093100, guid: 1c0720d6ea234d84ebf4e7d8e89c435a, type: 3}
   spawnChance: 0.1
+--- !u!114 &5023839034276248001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660264059144422497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c287a0a56ddf245ab58ff3001dc2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  verticalSpeed: 5
+  horizontalSpeed: 2
+  waveMagnitude: 0.5
