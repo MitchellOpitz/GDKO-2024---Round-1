@@ -44,6 +44,9 @@ public class ScoreManager : MonoBehaviour
         {
             Debug.Log("New high score!");
             highScoreUI.SetActive(true);
+            TextMeshProUGUI highScoreText = GameObject.Find("HighScoreText").GetComponent<TextMeshProUGUI>();
+            highScoreText.text = Score.ToString();
+
         }
     }
 
