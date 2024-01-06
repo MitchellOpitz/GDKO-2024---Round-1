@@ -54,6 +54,8 @@ public class Powerup : MonoBehaviour
 
     public void ActivateEffect()
     {
+        player = FindAnyObjectByType<PlayerShoot>();
+
         switch (powerupType)
         {
             case 1:
