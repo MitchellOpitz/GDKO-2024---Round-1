@@ -80,7 +80,7 @@ jobs:
        env:
          BUTLER_CREDENTIALS: ${{ secrets.ITCH_IO_API_KEY }}
          CHANNEL: HTML
-         ITCH_GAME: gdko-2024-round-1
+         ITCH_GAME: hyperdrive-havoc
          ITCH_USER: brainfartstudio
          BRANCH: itch-io
          PACKAGE: build/WebGL
