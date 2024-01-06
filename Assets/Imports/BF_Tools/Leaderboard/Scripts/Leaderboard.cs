@@ -58,6 +58,7 @@ public class Leaderboard : MonoBehaviour
             LeaderboardCreator.ResetPlayer();
         }));
     }
+
     public void GetHighScores()
     {
         //Debug.Log("Retrieving High Scores.");
