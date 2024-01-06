@@ -83,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.tag == "Enemy")
         {
             collision.GetComponent<EnemyHealth>().DestroyEnemy();
+            FindAnyObjectByType<PlayerManager>().TakeDamage();
         }
     }
 }
