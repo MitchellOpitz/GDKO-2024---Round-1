@@ -20,7 +20,6 @@ public class PlayerManager : MonoBehaviour
     {
         Destroy(GameObject.Find("Player(Clone)"));
         currentLives--;
-
         if (currentLives > 0)
         {
             StartCoroutine(DeathSequence());
@@ -44,7 +43,7 @@ public class PlayerManager : MonoBehaviour
 
     IEnumerator RespawnSequence()
     {
-        yield return new WaitForSeconds(1); // Placeholder for round start animation
+        yield return new WaitForSeconds(1);
         if (currentPlayerInstance != null)
         {
             Destroy(currentPlayerInstance);
@@ -55,23 +54,25 @@ public class PlayerManager : MonoBehaviour
 
     IEnumerator Invulnerability()
     {
-        SpriteRenderer spriteRenderer = currentPlayerInstance.GetComponent<SpriteRenderer>();
-        if (spriteRenderer != null)
+        SpriteRenderer[] spriteRenderers = currentPlayerInstance.GetComponentsInChildren<SpriteRenderer>();
+        float elapsedTime = 0;
+        while (elapsedTime < invulnerabilityTime)
         {
-            float elapsedTime = 0;
-            while (elapsedTime < invulnerabilityTime)
+            foreach (var renderer in spriteRenderers)
             {
-                spriteRenderer.enabled = !spriteRenderer.enabled;
-                yield return new WaitForSeconds(0.1f);
-                elapsedTime += 0.1f;
+                renderer.enabled = !renderer.enabled;
             }
-            spriteRenderer.enabled = true;
+            yield return new WaitForSeconds(0.1f);
+            elapsedTime += 0.1f;
+        }
+        foreach (var renderer in spriteRenderers)
+        {
+            renderer.enabled = true;
         }
     }
 
     private void NoLivesLeft()
     {
-        // Code for game over logic
-        Debug.Log("Game over.");
+        Debug.Log("Game over, darling.");
     }
 }
