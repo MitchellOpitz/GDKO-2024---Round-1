@@ -74,11 +74,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Touched something.");
         if (collision.tag == "Powerup")
         {
             Powerup powerup = collision.GetComponent<Powerup>();
             powerup.ActivateEffect();
+        }
+
+        if (collision.tag == "Enemy")
+        {
+            collision.GetComponent<EnemyHealth>().DestroyEnemy();
+            FindAnyObjectByType<PlayerManager>().TakeDamage();
         }
     }
 }

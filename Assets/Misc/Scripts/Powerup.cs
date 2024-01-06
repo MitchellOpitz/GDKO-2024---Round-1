@@ -10,12 +10,14 @@ public class Powerup : MonoBehaviour
 
     private int powerupType;
     private Camera mainCamera;
+    private PlayerShoot player;
 
     void Start()
     {
         mainCamera = Camera.main;
         powerupType = Random.Range(1, 4);
         SetSprite();
+        player = FindAnyObjectByType<PlayerShoot>();
     }
 
     void Update()
@@ -52,13 +54,15 @@ public class Powerup : MonoBehaviour
 
     public void ActivateEffect()
     {
+        player = FindAnyObjectByType<PlayerShoot>();
+
         switch (powerupType)
         {
             case 1:
-                Debug.Log("Effect for PowerUp type 1 Activated.");
+                player.UpdateBullets("Circle");
                 break;
             case 2:
-                Debug.Log("Effect for PowerUp type 2 Activated.");
+                player.UpdateBullets("Square");
                 break;
             case 3:
                 Debug.Log("Effect for PowerUp type 3 Activated.");
