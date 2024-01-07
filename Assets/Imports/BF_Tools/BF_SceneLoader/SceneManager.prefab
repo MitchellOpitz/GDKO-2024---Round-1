@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7391884167682909236}
-  - component: {fileID: 6709909810842727032}
-  - component: {fileID: 1659968049528967579}
+  - component: {fileID: 3998213246455427198}
+  - component: {fileID: 8933522400013303521}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 7912890339514896668}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6709909810842727032
+--- !u!114 &3998213246455427198
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,11 +43,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3585469221346302312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd1d07dcfd86a1e429dc772845de5b8d, type: 3}
+  m_Script: {fileID: 11500000, guid: fa808e34277b9714a8da8503f2c657d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fader: {fileID: 1659968049528967579}
---- !u!114 &1659968049528967579
+  fader: {fileID: 8933522400013303521}
+--- !u!114 &8933522400013303521
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,7 +56,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3585469221346302312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b1e04fa0480a39469a658dbc38cbdda, type: 3}
+  m_Script: {fileID: 11500000, guid: 1cdf62608061c7c44900f70ee8adcc8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 2097699361977940728}

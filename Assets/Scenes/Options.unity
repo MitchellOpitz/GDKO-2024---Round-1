@@ -801,13 +801,13 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f944ea0ba1ed56c46b74248672fd0f64, type: 3}
 --- !u!114 &814887580 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6709909810842727032, guid: f944ea0ba1ed56c46b74248672fd0f64, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3998213246455427198, guid: f944ea0ba1ed56c46b74248672fd0f64, type: 3}
   m_PrefabInstance: {fileID: 814887579}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd1d07dcfd86a1e429dc772845de5b8d, type: 3}
+  m_Script: {fileID: 11500000, guid: fa808e34277b9714a8da8503f2c657d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &882900936
@@ -1112,7 +1112,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 814887580}
-        m_TargetAssemblyTypeName: BF_SceneLoader, Assembly-CSharp
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadSceneByName
         m_Mode: 5
         m_Arguments:

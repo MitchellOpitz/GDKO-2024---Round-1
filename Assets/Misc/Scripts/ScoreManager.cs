@@ -53,6 +53,6 @@ public class ScoreManager : MonoBehaviour
     public void SubmitScore(TMP_InputField inputName)
     {
         submitScoreEvent.Invoke(inputName.text, Score);
-        BF_SceneLoader.Instance.LoadSceneByName("HighScores");
+        SceneLoader.Instance.LoadSceneByName("HighScores");
     }
 }
