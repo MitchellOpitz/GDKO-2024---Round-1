@@ -1,20 +1,28 @@
 using UnityEngine;
+using System.Collections;
 
 public class EnemyShoot : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public float bulletSpeed = 5f;
-    public float shootingInterval = 3f;
     private GameObject player;
 
     void Start()
     {
-        InvokeRepeating("ShootAtPlayer", shootingInterval, shootingInterval);
+        StartCoroutine(ShootAtPlayerCoroutine());
+    }
+
+    private IEnumerator ShootAtPlayerCoroutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(2f, 4f));
+            ShootAtPlayer();
+        }
     }
 
     void ShootAtPlayer()
     {
-        Debug.Log("Shooting now.");
         player = GameObject.FindGameObjectWithTag("Player");
         if (player != null && bulletPrefab != null)
         {
