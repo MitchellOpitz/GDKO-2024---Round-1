@@ -154,6 +154,7 @@ MonoBehaviour:
   verticalRiseSpeed: 5
   lowerThreshold: -1
   upperThreshold: 5
+  waitTimeAtTarget: 1
 --- !u!58 &3628454529078451045
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -205,6 +206,7 @@ MonoBehaviour:
   score: 300
   powerUpPrefab: {fileID: 4192745911213093100, guid: 1c0720d6ea234d84ebf4e7d8e89c435a, type: 3}
   spawnChance: 0.1
+  particlePrefab: {fileID: 507468817535207469, guid: 008cb436d4e329c4389478821cf16c9e, type: 3}
 --- !u!114 &9014704970576085370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,4 +221,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 8985013306141853661, guid: 29f92a7f016f8284693a04a781655351, type: 3}
   bulletSpeed: 5
-  shootingInterval: 3

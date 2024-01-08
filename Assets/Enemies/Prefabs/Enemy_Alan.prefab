@@ -185,6 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  waitTimeAtTarget: 1
 --- !u!114 &-3617866631288861193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,3 +202,4 @@ MonoBehaviour:
   score: 100
   powerUpPrefab: {fileID: 4192745911213093100, guid: 1c0720d6ea234d84ebf4e7d8e89c435a, type: 3}
   spawnChance: 0.1
+  particlePrefab: {fileID: 507468817535207469, guid: 008cb436d4e329c4389478821cf16c9e, type: 3}

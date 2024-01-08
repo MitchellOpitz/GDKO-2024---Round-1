@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour
     public int score = 100;
     public GameObject powerUpPrefab; // Placeholder for power-up prefab
     public float spawnChance = 0.1f; // 10% chance to spawn a power-up
+    public GameObject particlePrefab;
 
     private int currentHealth;
 
@@ -29,6 +30,7 @@ public class EnemyHealth : MonoBehaviour
         ScoreManager.Instance.AddScore(score);
         TrySpawnPowerUp();
         FindObjectOfType<EnemyManager>().EnemyDefeated(gameObject);
+        Instantiate(particlePrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
