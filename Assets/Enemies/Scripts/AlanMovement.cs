@@ -31,7 +31,8 @@ public class AlanMovement : MonoBehaviour
     private Vector3 GetRandomPositionWithinCamera()
     {
         float randomX = Random.Range(mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + halfWidth, mainCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - halfWidth);
-        float fixedY = mainCamera.ViewportToWorldPoint(new Vector3(0, 0.75f, 0)).y;
+        float randomYFraction = Random.Range(0.6f, 0.8f);
+        float fixedY = mainCamera.ViewportToWorldPoint(new Vector3(0, randomYFraction, 0)).y;
         return new Vector3(randomX, fixedY, 0);
     }
 
