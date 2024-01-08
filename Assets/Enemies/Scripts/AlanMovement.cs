@@ -39,7 +39,7 @@ public class AlanMovement : MonoBehaviour
     {
         while (Vector3.Distance(transform.position, targetPosition) > 0.1f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, 5 * Time.deltaTime);
             yield return null;
         }
         yield return new WaitForSeconds(waitTimeAtTarget);
