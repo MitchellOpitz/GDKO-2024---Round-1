@@ -1,12 +1,15 @@
 using UnityEngine;
+using System.Collections;
 
 public class AlanMovement : MonoBehaviour
 {
     public float speed = 5.0f;
+    public float waitTimeAtTarget = 1.0f;
     private Vector2 movementDirection;
     private float halfWidth;
     private float halfHeight;
     private Camera mainCamera;
+    private bool isEntering;
 
     void Start()
     {
@@ -14,12 +17,42 @@ public class AlanMovement : MonoBehaviour
         halfWidth = GetComponent<SpriteRenderer>().bounds.extents.x;
         halfHeight = GetComponent<SpriteRenderer>().bounds.extents.y;
         mainCamera = Camera.main;
+        isEntering = true;
+
+        EnterPlayField();
+    }
+
+    private void EnterPlayField()
+    {
+        Vector3 targetPosition = GetRandomPositionWithinCamera();
+        StartCoroutine(MoveToPosition(targetPosition));
+    }
+
+    private Vector3 GetRandomPositionWithinCamera()
+    {
+        float randomX = Random.Range(mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + halfWidth, mainCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - halfWidth);
+        float fixedY = mainCamera.ViewportToWorldPoint(new Vector3(0, 0.75f, 0)).y;
+        return new Vector3(randomX, fixedY, 0);
+    }
+
+    private IEnumerator MoveToPosition(Vector3 targetPosition)
+    {
+        while (Vector3.Distance(transform.position, targetPosition) > 0.1f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+            yield return null;
+        }
+        yield return new WaitForSeconds(waitTimeAtTarget);
+        isEntering = false;
     }
 
     void Update()
     {
-        Move();
-        CheckCollisionWithCameraBorders();
+        if (!isEntering)
+        {
+            Move();
+            CheckCollisionWithCameraBorders();
+        }
     }
 
     void Move()
