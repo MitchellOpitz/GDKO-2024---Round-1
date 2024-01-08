@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class EnemyHealth : MonoBehaviour
         FindObjectOfType<EnemyManager>().EnemyDefeated(gameObject);
         Instantiate(particlePrefab, transform.position, Quaternion.identity);
         CameraShake.Shake(0.1f, 0.2f);
+        FindAnyObjectByType<ScorePopup>().ShowScorePopup(score, transform.position);
         Destroy(gameObject);
     }
 
@@ -47,4 +49,5 @@ public class EnemyHealth : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
 }
