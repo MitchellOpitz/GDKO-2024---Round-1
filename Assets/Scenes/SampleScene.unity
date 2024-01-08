@@ -646,14 +646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 660264059144422497, guid: 9dfdf402bb406e4479910a483b1de125, type: 3}
-  - {fileID: 660264059144422497, guid: 9dfdf402bb406e4479910a483b1de125, type: 3}
-  - {fileID: 660264059144422497, guid: 9dfdf402bb406e4479910a483b1de125, type: 3}
-  - {fileID: 660264059144422497, guid: 9dfdf402bb406e4479910a483b1de125, type: 3}
-  - {fileID: 660264059144422497, guid: 9dfdf402bb406e4479910a483b1de125, type: 3}
-  - {fileID: 660264059144422497, guid: dc25335689f00b045acfc54d8ae8f54a, type: 3}
-  - {fileID: 660264059144422497, guid: dc25335689f00b045acfc54d8ae8f54a, type: 3}
-  - {fileID: 660264059144422497, guid: dc25335689f00b045acfc54d8ae8f54a, type: 3}
+  - {fileID: 660264059144422497, guid: 8dfb908659a09fe4c955ec50f441ce61, type: 3}
 --- !u!4 &841551312
 Transform:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class LipsMovement : MonoBehaviour
 {
@@ -6,36 +7,68 @@ public class LipsMovement : MonoBehaviour
     public float verticalRiseSpeed = 5.0f;
     public float lowerThreshold = -3.0f;
     public float upperThreshold = 3.0f;
+    public float waitTimeAtTarget = 1.0f; // Time to wait at target position
     private Vector2 movementDirection;
     private Camera mainCamera;
     private bool rising = false;
+    private bool isEntering;
 
     void Start()
     {
         movementDirection = new Vector2(1, -1).normalized; // Initial diagonal movement
         mainCamera = Camera.main;
+        isEntering = true;
+
+        EnterPlayField();
+    }
+
+    private void EnterPlayField()
+    {
+        Vector3 targetPosition = GetRandomPositionWithinCamera();
+        StartCoroutine(MoveToPosition(targetPosition));
+    }
+
+    private Vector3 GetRandomPositionWithinCamera()
+    {
+        float randomX = Random.Range(mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x, mainCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x);
+        float fixedY = mainCamera.ViewportToWorldPoint(new Vector3(0, 0.75f, 0)).y;
+        return new Vector3(randomX, fixedY, 0);
+    }
+
+    private IEnumerator MoveToPosition(Vector3 targetPosition)
+    {
+        while (Vector3.Distance(transform.position, targetPosition) > 0.1f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, diagonalSpeed * Time.deltaTime);
+            yield return null;
+        }
+        yield return new WaitForSeconds(waitTimeAtTarget);
+        isEntering = false;
     }
 
     void Update()
     {
-        if (!rising)
+        if (!isEntering)
         {
-            MoveDiagonally();
-            if (transform.position.y <= lowerThreshold)
+            if (!rising)
             {
-                rising = true;
+                MoveDiagonally();
+                if (transform.position.y <= lowerThreshold)
+                {
+                    rising = true;
+                }
             }
-        }
-        else
-        {
-            MoveUp();
-            if (transform.position.y >= upperThreshold)
+            else
             {
-                rising = false;
+                MoveUp();
+                if (transform.position.y >= upperThreshold)
+                {
+                    rising = false;
+                }
             }
-        }
 
-        CheckAndReflectAtScreenEdges();
+            CheckAndReflectAtScreenEdges();
+        }
     }
 
     void MoveDiagonally()
@@ -54,19 +87,15 @@ public class LipsMovement : MonoBehaviour
         if (screenPosition.x > 1 || screenPosition.x < 0)
         {
             movementDirection.x *= -1; // Reflect horizontally
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         }
     }
+
     void OnDrawGizmos()
     {
-        // Set the color for the lower threshold line
         Gizmos.color = Color.red;
-        // Draw a horizontal line for the lower threshold
         Gizmos.DrawLine(new Vector3(-10, lowerThreshold, 0), new Vector3(10, lowerThreshold, 0));
 
-        // Set the color for the upper threshold line
         Gizmos.color = Color.green;
-        // Draw a horizontal line for the upper threshold
         Gizmos.DrawLine(new Vector3(-10, upperThreshold, 0), new Vector3(10, upperThreshold, 0));
     }
 }
