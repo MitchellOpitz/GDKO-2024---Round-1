@@ -31,6 +31,7 @@ public class EnemyHealth : MonoBehaviour
         TrySpawnPowerUp();
         FindObjectOfType<EnemyManager>().EnemyDefeated(gameObject);
         Instantiate(particlePrefab, transform.position, Quaternion.identity);
+        CameraShake.Shake(0.1f, 0.2f);
         Destroy(gameObject);
     }
 
