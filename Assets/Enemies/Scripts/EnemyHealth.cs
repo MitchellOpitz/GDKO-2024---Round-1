@@ -28,6 +28,7 @@ public class EnemyHealth : MonoBehaviour
     {
         ScoreManager.Instance.AddScore(score);
         TrySpawnPowerUp();
+        FindObjectOfType<EnemyManager>().EnemyDefeated(gameObject);
         Destroy(gameObject);
     }
 
