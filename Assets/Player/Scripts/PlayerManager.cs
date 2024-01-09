@@ -9,6 +9,7 @@ public class PlayerManager : MonoBehaviour
     public Transform respawnPoint;
     private GameObject currentPlayerInstance;
     public float invulnerabilityTime = 3f;
+    public bool isInvulnerable = false;
 
     void Start()
     {
@@ -18,15 +19,18 @@ public class PlayerManager : MonoBehaviour
 
     public void TakeDamage()
     {
-        Destroy(GameObject.Find("Player(Clone)"));
-        currentLives--;
-        if (currentLives > 0)
+        if (!isInvulnerable)
         {
-            StartCoroutine(DeathSequence());
-        }
-        else
-        {
-            NoLivesLeft();
+            Destroy(GameObject.Find("Player(Clone)"));
+            currentLives--;
+            if (currentLives > 0)
+            {
+                StartCoroutine(DeathSequence());
+            }
+            else
+            {
+                NoLivesLeft();
+            }
         }
     }
 
@@ -54,6 +58,7 @@ public class PlayerManager : MonoBehaviour
 
     IEnumerator Invulnerability()
     {
+        isInvulnerable = true;
         SpriteRenderer[] spriteRenderers = currentPlayerInstance.GetComponentsInChildren<SpriteRenderer>();
         float elapsedTime = 0;
         while (elapsedTime < invulnerabilityTime)
@@ -69,6 +74,7 @@ public class PlayerManager : MonoBehaviour
         {
             renderer.enabled = true;
         }
+        isInvulnerable = false;
     }
 
     private void NoLivesLeft()
