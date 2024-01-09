@@ -2008,6 +2008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 1884457255917205874, guid: bfdc7214cd64daf4287bbd8bd5a30925, type: 3}
+  playerParticles: {fileID: 6338992620784985688, guid: a1e08f5c69d08fe43bdff57ebf3ca436, type: 3}
   maxLives: 3
   respawnPoint: {fileID: 669989496}
   invulnerabilityTime: 3

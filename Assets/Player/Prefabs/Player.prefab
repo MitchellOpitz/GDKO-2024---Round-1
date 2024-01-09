@@ -137,6 +137,7 @@ MonoBehaviour:
   leftSprite: {fileID: -956722052, guid: 7db3f04ea6e95e74fbfe450be62a7d9e, type: 3}
   rightSprite: {fileID: -1322003026, guid: 7db3f04ea6e95e74fbfe450be62a7d9e, type: 3}
   stoppedSprite: {fileID: 1474263276, guid: 7db3f04ea6e95e74fbfe450be62a7d9e, type: 3}
+  playerParticles: {fileID: 6338992620784985688, guid: a1e08f5c69d08fe43bdff57ebf3ca436, type: 3}
 --- !u!114 &5485352858392414771
 MonoBehaviour:
   m_ObjectHideFlags: 0

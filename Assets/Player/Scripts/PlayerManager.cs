@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerManager : MonoBehaviour
 {
     public GameObject playerPrefab;
+    public GameObject playerParticles;
     public int maxLives = 3;
     private int currentLives;
     public Transform respawnPoint;
@@ -21,7 +22,9 @@ public class PlayerManager : MonoBehaviour
     {
         if (!isInvulnerable)
         {
-            Destroy(GameObject.Find("Player(Clone)"));
+            GameObject player = GameObject.Find("Player(Clone)");
+            Instantiate(playerParticles, player.transform.position, Quaternion.identity);
+            Destroy(player);
             currentLives--;
             FindAnyObjectByType<LivesRemaining>().UpdateLivesDisplay(currentLives);
             if (currentLives > 0)
