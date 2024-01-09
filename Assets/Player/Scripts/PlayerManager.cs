@@ -23,6 +23,7 @@ public class PlayerManager : MonoBehaviour
         {
             Destroy(GameObject.Find("Player(Clone)"));
             currentLives--;
+            FindAnyObjectByType<LivesRemaining>().UpdateLivesDisplay(currentLives);
             if (currentLives > 0)
             {
                 StartCoroutine(DeathSequence());
