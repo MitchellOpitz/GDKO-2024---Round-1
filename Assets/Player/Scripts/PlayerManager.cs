@@ -4,11 +4,13 @@ using System.Collections;
 public class PlayerManager : MonoBehaviour
 {
     public GameObject playerPrefab;
+    public GameObject playerParticles;
     public int maxLives = 3;
     private int currentLives;
     public Transform respawnPoint;
     private GameObject currentPlayerInstance;
     public float invulnerabilityTime = 3f;
+    public bool isInvulnerable = false;
 
     void Start()
     {
@@ -18,15 +20,21 @@ public class PlayerManager : MonoBehaviour
 
     public void TakeDamage()
     {
-        Destroy(GameObject.Find("Player(Clone)"));
-        currentLives--;
-        if (currentLives > 0)
+        if (!isInvulnerable)
         {
-            StartCoroutine(DeathSequence());
-        }
-        else
-        {
-            NoLivesLeft();
+            GameObject player = GameObject.Find("Player(Clone)");
+            Instantiate(playerParticles, player.transform.position, Quaternion.identity);
+            Destroy(player);
+            currentLives--;
+            FindAnyObjectByType<LivesRemaining>().UpdateLivesDisplay(currentLives);
+            if (currentLives > 0)
+            {
+                StartCoroutine(DeathSequence());
+            }
+            else
+            {
+                NoLivesLeft();
+            }
         }
     }
 
@@ -54,6 +62,7 @@ public class PlayerManager : MonoBehaviour
 
     IEnumerator Invulnerability()
     {
+        isInvulnerable = true;
         SpriteRenderer[] spriteRenderers = currentPlayerInstance.GetComponentsInChildren<SpriteRenderer>();
         float elapsedTime = 0;
         while (elapsedTime < invulnerabilityTime)
@@ -69,6 +78,7 @@ public class PlayerManager : MonoBehaviour
         {
             renderer.enabled = true;
         }
+        isInvulnerable = false;
     }
 
     private void NoLivesLeft()
