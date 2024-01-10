@@ -4,12 +4,11 @@ using UnityEngine.UI;
 public class LivesRemaining : MonoBehaviour
 {
     public Sprite[] numberSprites; // Assign this in the inspector, with 0-9 sprites
-    private SpriteRenderer spriteRenderer;
+    public Image sourceImage;
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        if (spriteRenderer == null)
+        if (sourceImage == null)
         {
             Debug.LogError("SpriteRenderer not found on the object.");
         }
@@ -19,11 +18,12 @@ public class LivesRemaining : MonoBehaviour
     {
         if (livesRemaining >= 0 && livesRemaining < numberSprites.Length)
         {
-            spriteRenderer.sprite = numberSprites[livesRemaining];
+            sourceImage.sprite = numberSprites[livesRemaining];
         }
         else
         {
             Debug.LogError("Invalid number of lives remaining.");
         }
     }
+
 }
