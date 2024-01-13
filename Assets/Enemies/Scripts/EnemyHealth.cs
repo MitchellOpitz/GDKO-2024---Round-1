@@ -28,8 +28,9 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
+        AudioManager.instance.PlaySound("EnemyDeath");
         ScoreManager.Instance.AddScore(score);
-        TrySpawnPowerUp();
+        //TrySpawnPowerUp();
         FindObjectOfType<EnemyManager>().EnemyDefeated(gameObject);
         Instantiate(particlePrefab, transform.position, Quaternion.identity);
         CameraShake.Shake(0.1f, 0.2f);

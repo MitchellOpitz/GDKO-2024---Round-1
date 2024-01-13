@@ -27,6 +27,7 @@ public class EnemyShoot : MonoBehaviour
         if (player != null && bulletPrefab != null)
         {
             GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            AudioManager.instance.PlaySound("EnemyShoot");
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
             if (rb != null)
