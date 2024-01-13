@@ -42,8 +42,11 @@ public class AudioManager : MonoBehaviour
 
         // Load the saved music volume preference
         float savedMusicVolume = PlayerPrefs.GetFloat(MusicVolumePlayerPrefKey, 0.5f); // Default to 0.5 (50% volume)
-        musicVolumeSlider.value = savedMusicVolume; // Update the slider's value
-        UpdateMusicVolume(); // Set the volume based on the loaded preference
+        if(musicVolumeSlider != null)
+        {
+            musicVolumeSlider.value = savedMusicVolume; // Update the slider's value
+            UpdateMusicVolume(); // Set the volume based on the loaded preference
+        }
     }
 
     public void PlaySound(string name)
