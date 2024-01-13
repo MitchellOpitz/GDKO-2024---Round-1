@@ -35,9 +35,15 @@ public class Leaderboard : MonoBehaviour
 
                 int nameLength = name.Length;
                 int scoreLength = score.Length;
-                int zerosNeeded = 20 - nameLength - scoreLength;
+                int zerosNeeded = 25 - nameLength - scoreLength;
 
-                string highScoreEntry = name;
+                string highScoreEntry = (i + 1).ToString() + ".    ";
+                if(i == highScores.Count - 1)
+                {
+                    highScoreEntry = (i + 1).ToString() + ".   ";
+                }
+                
+                highScoreEntry = highScoreEntry + name;
                 while (zerosNeeded > 0)
                 {
                     highScoreEntry = highScoreEntry + " ";
