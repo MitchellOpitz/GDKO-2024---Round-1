@@ -1904,12 +1904,76 @@ PrefabInstance:
       value: AudioManager
       objectReference: {fileID: 0}
     - target: {fileID: 8568573100461067041, guid: f1ba3d999973b594b92ca8bf92a497ee, type: 3}
+      propertyPath: sounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8568573100461067041, guid: f1ba3d999973b594b92ca8bf92a497ee, type: 3}
       propertyPath: sounds.Array.data[0].clip
       value: 
       objectReference: {fileID: 8300000, guid: a73be5c9406b1e94cb60faa5e8b0c0a0, type: 3}
     - target: {fileID: 8568573100461067041, guid: f1ba3d999973b594b92ca8bf92a497ee, type: 3}
       propertyPath: sounds.Array.data[0].name
       value: GameMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 8568573100461067041, guid: f1ba3d999973b594b92ca8bf92a497ee, type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f6cd5e800b9bba944a2cc51e7500f8de, type: 3}
+    - target: {fileID: 8568573100461067041, guid: f1ba3d999973b594b92ca8bf92a497ee, type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: PlayerShoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 8568573100461067041, guid: f1ba3d999973b594b92ca8bf92a497ee, type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 64b88a487e2cc9e4e9c376a67e05206a, type: 3}
+    - target: {fileID: 8568573100461067041, guid: f1ba3d999973b594b92ca8bf92a497ee, type: 3}
+      propertyPath: sounds.Array.data[2].name
+      value: PlayerDeath
+      objectReference: {fileID: 0}
+    - target: {fileID: 8568573100461067041, guid: f1ba3d999973b594b92ca8bf92a497ee, type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b8999e0198d2d244499f4c1c82ea8e96, type: 3}
+    - target: {fileID: 8568573100461067041, guid: f1ba3d999973b594b92ca8bf92a497ee, type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: EnemyDeath
+      objectReference: {fileID: 0}
+    - target: {fileID: 8568573100461067041, guid: f1ba3d999973b594b92ca8bf92a497ee, type: 3}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 956fcd8282498e94f83e8948c24d6c86, type: 3}
+    - target: {fileID: 8568573100461067041, guid: f1ba3d999973b594b92ca8bf92a497ee, type: 3}
+      propertyPath: sounds.Array.data[4].name
+      value: EnemyShoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 8568573100461067041, guid: f1ba3d999973b594b92ca8bf92a497ee, type: 3}
+      propertyPath: sounds.Array.data[2].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8568573100461067041, guid: f1ba3d999973b594b92ca8bf92a497ee, type: 3}
+      propertyPath: sounds.Array.data[3].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8568573100461067041, guid: f1ba3d999973b594b92ca8bf92a497ee, type: 3}
+      propertyPath: sounds.Array.data[4].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8568573100461067041, guid: f1ba3d999973b594b92ca8bf92a497ee, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8568573100461067041, guid: f1ba3d999973b594b92ca8bf92a497ee, type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8568573100461067041, guid: f1ba3d999973b594b92ca8bf92a497ee, type: 3}
+      propertyPath: sounds.Array.data[3].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8568573100461067041, guid: f1ba3d999973b594b92ca8bf92a497ee, type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

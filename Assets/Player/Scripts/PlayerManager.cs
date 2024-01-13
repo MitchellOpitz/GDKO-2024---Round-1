@@ -22,6 +22,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (!isInvulnerable)
         {
+            AudioManager.instance.PlaySound("PlayerDeath");
             GameObject player = GameObject.Find("Player(Clone)");
             Instantiate(playerParticles, player.transform.position, Quaternion.identity);
             Destroy(player);

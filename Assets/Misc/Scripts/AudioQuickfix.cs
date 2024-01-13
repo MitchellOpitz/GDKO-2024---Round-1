@@ -17,4 +17,10 @@ public class AudioQuickfix : MonoBehaviour
         audioManager = FindObjectOfType<AudioManager>();
         Destroy(audioManager.gameObject);
     }
+
+    public void ButtonSound()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
+        audioManager.PlaySound("ButtonPress");
+    }
 }

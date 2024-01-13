@@ -11,6 +11,13 @@ public class PlayerShoot : MonoBehaviour
     public Transform projectileSpawnPoint;
     public float jitterMagnitude = 0.1f; // Control the jitter effect magnitude
 
+    private AudioManager audioManager;
+
+    private void Start()
+    {
+        audioManager = FindAnyObjectByType<AudioManager>();
+    }
+
     void Update()
     {
         if (Input.GetButtonDown("Fire2"))
@@ -29,6 +36,7 @@ public class PlayerShoot : MonoBehaviour
 
         GameObject projectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
         Rigidbody2D projectileRb = projectile.GetComponent<Rigidbody2D>();
+        audioManager.PlaySound("PlayerShoot");
 
         if (projectileRb != null)
         {

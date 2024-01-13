@@ -28,6 +28,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
+        AudioManager.instance.PlaySound("EnemyDeath");
         ScoreManager.Instance.AddScore(score);
         //TrySpawnPowerUp();
         FindObjectOfType<EnemyManager>().EnemyDefeated(gameObject);
