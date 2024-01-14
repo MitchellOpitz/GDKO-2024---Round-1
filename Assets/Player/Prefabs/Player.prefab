@@ -156,6 +156,7 @@ MonoBehaviour:
   shootingDirection: {x: 0, y: 1}
   projectileSpawnPoint: {fileID: 8349375177758685795}
   jitterMagnitude: 0.1
+  shootCooldown: 0.1
 --- !u!50 &4811070304781469147
 Rigidbody2D:
   serializedVersion: 4
