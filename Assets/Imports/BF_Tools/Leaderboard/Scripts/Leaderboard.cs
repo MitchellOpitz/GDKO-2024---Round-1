@@ -13,7 +13,7 @@ public class Leaderboard : MonoBehaviour
 
     private List<int> scoresList = new List<int>(new int[10]);
     private string publicLeaderboardKey =
-        "486a9b5744db414f64d5b009ef3572f7f952e91ffeddf769962f505f03e1d344";
+        "cfc3af2e3c0d4cbc15a8e0a21e0f260486d31fe05f3a6e4994b8ec307fe9ac12";
 
     private void Start()
     {
