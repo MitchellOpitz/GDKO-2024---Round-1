@@ -18,9 +18,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        HandleInput();
-        MovePlayer();
-        UpdateSpriteAndAnimation();
+        if (!FindAnyObjectByType<PauseGame>().IsPaused())
+        {
+            HandleInput();
+            MovePlayer();
+            UpdateSpriteAndAnimation();
+        }
+        else
+        {
+            isMovingRight = false;
+        }
     }
 
     void Initialize()

@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Collections; // Required for IEnumerator
+using System.Collections;
 
 public class PlayerShoot : MonoBehaviour
 {
@@ -9,8 +9,10 @@ public class PlayerShoot : MonoBehaviour
     public float projectileSpeed = 10f;
     public Vector2 shootingDirection = Vector2.up;
     public Transform projectileSpawnPoint;
-    public float jitterMagnitude = 0.1f; // Control the jitter effect magnitude
+    public float jitterMagnitude = 0.1f;
+    public float shootCooldown = 0.5f;
 
+    private float lastShootTime;
     private AudioManager audioManager;
 
     private void Start()
@@ -20,9 +22,10 @@ public class PlayerShoot : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2") && !FindAnyObjectByType<PauseGame>().IsPaused() && Time.time - lastShootTime >= shootCooldown)
         {
             Shoot();
+            lastShootTime = Time.time;
         }
     }
 
@@ -47,15 +50,15 @@ public class PlayerShoot : MonoBehaviour
             Debug.LogError("Projectile prefab does not have a Rigidbody2D component.");
         }
 
-        StartCoroutine(JitterEffect()); // Call the jitter coroutine
+        StartCoroutine(JitterEffect());
     }
 
     IEnumerator JitterEffect()
     {
-        float originalY = transform.position.y;  // Store the original Y position
-        transform.position = new Vector3(transform.position.x, transform.position.y - jitterMagnitude, transform.position.z); // Move down
-        yield return new WaitForSeconds(0.05f); // Adjust this time for the duration of the jitter
-        transform.position = new Vector3(transform.position.x, originalY, transform.position.z); // Return to original Y position, keeping the current X position
+        float originalY = transform.position.y;
+        transform.position = new Vector3(transform.position.x, transform.position.y - jitterMagnitude, transform.position.z);
+        yield return new WaitForSeconds(0.05f);
+        transform.position = new Vector3(transform.position.x, originalY, transform.position.z);
     }
 
     public void UpdateBullets(string newProjectile)
