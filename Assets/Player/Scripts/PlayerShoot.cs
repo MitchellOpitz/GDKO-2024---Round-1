@@ -20,7 +20,7 @@ public class PlayerShoot : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2") && !FindAnyObjectByType<PauseGame>().IsPaused())
         {
             Shoot();
         }
