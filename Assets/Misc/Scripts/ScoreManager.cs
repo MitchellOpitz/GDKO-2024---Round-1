@@ -8,6 +8,7 @@ public class ScoreManager : MonoBehaviour
     public UnityEvent<string, int> submitScoreEvent;
 
     public GameObject highScoreUI;
+    public GameObject gameOverUI;
 
 
     public int Score { get; private set; }
@@ -41,7 +42,9 @@ public class ScoreManager : MonoBehaviour
             highScoreUI.SetActive(true);
             TextMeshProUGUI highScoreText = GameObject.Find("HighScoreText").GetComponent<TextMeshProUGUI>();
             highScoreText.text = Score.ToString();
-
+        } else
+        {
+            gameOverUI.SetActive(true);
         }
     }
 
